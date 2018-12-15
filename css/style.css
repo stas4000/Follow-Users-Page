@@ -1,0 +1,28 @@
+.follow {
+    font-weight: 700;
+    color: white;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.follow:disabled {
+    color: #ffffff;
+    background-color: #ffc107a1;
+    border-color: #ffc107;
+}
+.following {
+    font-weight: 700;
+    color: white;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.following:hover span {
+    display: none;
+}
+.following:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+
+}
+.following:hover:after {
+    content: 'Unfollow';
+}
