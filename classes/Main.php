@@ -22,6 +22,9 @@ class Main
         try {
             setcookie('user', 'Semion');
             setcookie('user_id', '12');
+            if(!isset($_COOKIE['user'])) {
+                header("Refresh:0");
+            }
             $stmt = $this->pdo->prepare("SELECT u.id, u.name, g.name group_name, 
                                                   IF(f.followers IS NOT NULL, f.followers, '0') following,
                                                   (SELECT 1 FROM follow_scheme WHERE following_user_id = ? AND followed_user_id = u.id) is_following
